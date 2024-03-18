@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<style>
+
+table,th {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 20px;
+}  
+
+
+.about_me{
+    padding-top:2%;
+    margin-right:20%; 
+    margin-left:20%;
+}
+
+.subject_taken{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.current_sub{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+ .subject_taken, .current_sub, .favorites, .contact{
+    display: none;
+}
+
+</style>
+
+
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+
+  <img src=" https://mu.edu.ph/images/logo.png" alt="mu" width="70" height="70">
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left:2%;">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a id="about" class="nav-link active">About Me</a>
+      </li>
+
+      <li class="nav-item">
+        <a id="sub_taken" class="nav-link " >Subject Taken</a>
+      </li>
+
+      <li class="nav-item">
+        <a id="Current_Sub" class="nav-link" >Subject Currently Enrolled</a>
+      </li>
+
+       <li class="nav-item">
+        <a id="Favorites" class="nav-link " >Favorites</a>
+      </li>
+
+      <li class="nav-item">
+        <a id="info" class="nav-link" >Contact Information</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+<!--<div style = "background-color: #AFEEEE">
+    <center><h1>PERSONAL INFORMATION</h1></center>
+        <center><table>
+            <tr>
+                <th><button id="about" class="btn btn-primary">About Me</button></th>
+                <th><button id="sub_taken" class="btn btn-primary">Subject Taken</button></th>
+                <th><button id="Current_Sub" class="btn btn-primary">Subject Currently Enrolled</button></th>
+                <th><button id="Favorites" class="btn btn-primary">Favorites</button></th>
+                <th><button id="info" class="btn btn-primary">Contact Information</button></th>
+            </tr>
+        </table></center>
+</div>-->
+
+<div id="about_me" class="about_me" >
+    <center><h1>About Me</h1></center>
+    <center><img src="s.jpg" alt="image" id="image" style ="height:20%; width:20%; "></center><br>
+    <div style="margin-right:30%; margin-left:30%;">
+        <p> Hi! I'm Sierra Marie Bunilla 22 years of age. I'm currently studying Information Technology in Misamis University. I live in Happy House Zamora St. Ozamiz City. My favorite color is aquablue and my favorite fruit is mango.</p>
+<p>My favorite verse is in Isaiah 60:22 When the time is right, I, the Lord, will make it happen</p>
+        </div>
+    </div>
+
+
+
+<div id="subject_taken" class="subject_taken" align="center"><br><br><br>
+    <center><h3>SUBJECT TAKEN</h3></center><br><br>
+<table>
+        <tr>
+            <th>Subject Code</th>
+            <th>Subject</th>
+            <th>Units</th>
+        </tr>
+        <tr>
+            <td>ITP 101</td>
+            <td>ITP 10</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>ITP 111</td>
+            <td>ITP 11</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>ITP 52</td>
+            <td>ITP 5</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>ITEL 3A1</td>
+            <td>ITEL 3A</td>
+            <td>3.0</td>
+        </tr>
+</table>
+</div>
+
+<div id="current_sub" class="current_sub" align="center"><br><br><br>
+    <center><h3>SUBJECT CURRENTLY ENROLLED</h3></center><br><br>
+    <table>
+            <tr>
+                <th>Subject Code</th>
+                <th>Subject</th>
+                <th>Units</th>
+            </tr>
+            <tr>
+                <td>ITP 101</td>
+                <td>ITP 10</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>ITP 111</td>
+                <td>ITP 11</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>ITP 52</td>
+                <td>ITP 5</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>ITEL 3A1</td>
+                <td>ITEL 3A</td>
+                <td>3.0</td>
+            </tr>
+    </table>
+    </div>
+
+<div id="favorites" class="favorites" align="center">
+<h1>My Favorites</h1>
+<div class="d"><center><p><b><i> "Don't judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson" </b></p>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="pineapple.JPG" alt="fruit" height="150px" width="30%">
+    <img src="icecream.JPG" alt="dessert" height="150px" width="30%">
+    <img src="pinacolada.JPG" alt="drinks" height="150px" width="30%">
+  </div>
+    <div class="column">
+    <img src="orange.JPG" alt="fruit" height="150px" width="30%">
+    <img src="macaroons.JPG" alt="dessert" height="150px" width="30%">
+    <img src="lemonade.JPG" alt="drinks" height="150px" width="30%">
+  </div>
+</div></div>
+        </tr>
+    </table>
+</div>
+
+<div  id="contact" class="contact" align="center"><br><br><br>
+    <center><h3>Contact Information</h3></center><br><br>
+    <table>
+        <tr>
+            <td>Facebook: </td>
+            <td>Marie Sierra</td>
+        </tr>
+        <tr>
+            <td>Instagram: </td>
+            <td>@sierrain02</td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td>sierrabunilla@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Phone #: </td>
+            <td>09464685370</td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+<script>
+$(document).ready(function(){
+
+$("#subject_taken").hide();
+$("#current_sub").hide();
+$("#favorites").hide();
+$("#contact").hide();
+
+
+$("#about").click(function(){
+$("#about_me").show();
+$("#subject_taken").hide();
+$("#current_sub").hide();
+$("#favorites").hide();
+$("#contact").hide();
+
+});
+$("#sub_taken").click(function(){
+$("#about_me").hide();
+$("#subject_taken").show();
+$("#current_sub").hide();
+$("#favorites").hide();
+$("#contact").hide();
+});
+
+$("#Current_Sub").click(function(){
+$("#about_me").hide();
+$("#subject_taken").hide();
+$("#current_sub").show();
+$("#favorites").hide();
+$("#contact").hide();
+});
+
+$("#Favorites").click(function(){
+$("#about_me").hide();
+$("#subject_taken").hide();
+$("#current_sub").hide();
+$("#favorites").show();
+$("#contact").hide();
+});
+
+$("#info").click(function(){
+$("#about_me").hide();
+$("#subject_taken").hide();
+$("#current_sub").hide();
+$("#favorites").hide();
+$("#contact").show();
+});
+
+$('.navbar-nav .nav-link').click(function(){
+    $('.navbar-nav .nav-link').removeClass('active');
+    $(this).addClass('active');
+});
+});
+</script>
+</html>
